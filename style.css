@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: "Consolas", monospace;
+  background-color: #0b0f19;
+  color: #d3f8d3;
+}
+
+header {
+  background: #111a2b;
+  padding: 1rem 2rem;
+  color: #b8e986;
+  border-bottom: 2px solid #00ff66;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.left-panel {
+  flex: 1;
+  background: #121d2f;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+.right-panel {
+  flex: 2;
+  background: #121d2f;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+h2 {
+  color: #8aff8a;
+}
+
+.command-input input {
+  padding: 6px;
+  width: 70%;
+  background: #0c1625;
+  color: #c8ffc8;
+  border: 1px solid #00ff66;
+  border-radius: 5px;
+}
+
+.command-input button {
+  padding: 6px 12px;
+  background: #00ff66;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quick-btns button {
+  margin: 4px;
+  background: #0c2c0c;
+  color: #00ff66;
+  border: 1px solid #00ff66;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quick-btns button:hover {
+  background: #00ff66;
+  color: #0c2c0c;
+}
+
+.log-box {
+  height: 150px;
+  overflow-y: auto;
+  background: #000;
+  color: #00ff99;
+  font-size: 0.9rem;
+  border: 1px solid #00ff66;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.status-panels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.panel {
+  flex: 1;
+  border: 1px solid #00ff66;
+  padding: 0.5rem;
+  background: #0c1423;
+  border-radius: 6px;
+  color: #90ffa0;
+}
+
+#map {
+  height: 300px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #00ff66;
+}
+
+#radarCanvas {
+  background: #000;
+  display: block;
+  margin: auto;
+  border: 1px solid #00ff66;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ff66;
+}
