@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sentinel-X | Defence Radar Analyzer</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>🛰️ Sentinel-X</h1>
+    <p>Defence Radar Data Analyzer • Real-Time Tracking & Visualization</p>
+  </header>
+
+  <main>
+    <section class="left-panel">
+      <h2>Controls</h2>
+      <div class="command-input">
+        <input id="commandInput" placeholder="Enter command (scan / analyze / report)">
+        <button onclick="executeCommand()">Send</button>
+      </div>
+
+      <div class="quick-btns">
+        <button onclick="scan()">Scan</button>
+        <button onclick="generateReport()">Report</button>
+        <button onclick="analyze()">Analyze</button>
+        <button onclick="clearLogs()">Clear</button>
+        <button onclick="showHelp()">Help</button>
+      </div>
+
+      <h3>System Log</h3>
+      <div id="log" class="log-box"></div>
+
+      <div class="status-panels">
+        <div id="systemStatus" class="panel">
+          <h3>System Status</h3>
+          <p>Uptime: <span id="uptime">0s</span></p>
+          <p>Active Targets: <span id="activeTargets">0</span></p>
+          <p>Wind Speed: <span id="wind">-- km/h</span></p>
+          <p>Weather: <span id="weather">--</span></p>
+          <p>CPU Load: <span id="cpuLoad">--%</span></p>
+          <p>Temperature: <span id="temperature">--°C</span></p>
+        </div>
+
+        <div id="targetList" class="panel">
+          <h3>Tracked Targets</h3>
+          <table>
+            <thead>
+              <tr><th>ID</th><th>Distance (km)</th><th>Velocity (m/s)</th></tr>
+            </thead>
+            <tbody id="targetTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <h2>Radar Display</h2>
+      <canvas id="radarCanvas" width="500" height="500"></canvas>
+
+      <h2>Target Map</h2>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <script src="static/radar.js"></script>
+</body>
+</html>
